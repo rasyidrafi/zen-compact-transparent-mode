@@ -45,20 +45,6 @@
     }
   }
 
-  @media (-moz-bool-pref: "mod.compacttpr.applynoncompact") {
-    :root[zen-compact-mode="false"]:not([customizing]) {
-      #zen-appcontent-navbar-wrapper #zen-appcontent-navbar-container {
-        background: var(--mod-compacttpr-customcolor-final) !important;
-      }
-    }
-
-    :root[zen-compact-mode="false"]:not([customizing]) {
-      #titlebar {
-        background: var(--mod-compacttpr-customcolor-final) !important;
-      }
-    }
-  }
-
   #titlebar {
     border-radius: var(--zen-border-radius) !important;
   }

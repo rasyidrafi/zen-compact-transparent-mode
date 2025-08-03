@@ -18,12 +18,6 @@
     "defaultValue": "rgba(23, 23, 26, 1)"
   },
   {
-    "property": "mod.compacttpr.applynoncompact",
-    "label": "Also apply this color on non-compact mode",
-    "type": "checkbox",
-    "defaultValue": false
-  },
-  {
     "property": "mod.compacttpr.customblur",
     "label": "Custom blur for the component",
     "type": "string",
