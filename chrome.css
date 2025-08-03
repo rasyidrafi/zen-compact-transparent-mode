@@ -1,0 +1,47 @@
+@media (-moz-bool-pref: "mod.compacttpr.usecompacttransparent") {
+  @media (-moz-bool-pref: "mod.compacttpr.usefromzen") {
+    :root {
+      --mod-compacttpr-customcolor-final: var(
+        --zen-dialog-background,
+        var(--mod-compacttpr-customcolor, rgba(23, 23, 26, 1))
+      ) !important;
+    }
+  }
+
+  @media not (-moz-bool-pref: "mod.compacttpr.usefromzen") {
+    :root {
+      --mod-compacttpr-customcolor-final: var(
+        --mod-compacttpr-customcolor,
+        rgba(23, 23, 26, 1)
+      ) !important;
+    }
+  }
+
+  :root[zen-compact-mode="true"]:not([customizing]) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
+      &:not([zen-single-toolbar="true"])
+        #zen-appcontent-navbar-wrapper
+        #zen-appcontent-navbar-container {
+        background: color-mix(
+          in srgb,
+          var(--zen-dialog-background),
+          transparent var(--mod-compacttpr-transparentvalue, 30%)
+        ) !important;
+        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+      }
+    }
+  }
+
+  @media (-moz-bool-pref: "mod.compacttpr.applynoncompact") {
+    :root[zen-compact-mode="false"]:not([customizing]) {
+      #zen-appcontent-navbar-wrapper #zen-appcontent-navbar-container {
+        background: color-mix(
+          in srgb,
+          var(--zen-dialog-background),
+          transparent var(--mod-compacttpr-transparentvalue, 30%)
+        ) !important;
+        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+      }
+    }
+  }
+}

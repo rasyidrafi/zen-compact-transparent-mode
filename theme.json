@@ -1,0 +1,18 @@
+{
+  "id": "42b8c4ac-76d5-4521-9917-2e478931ee53",
+  "name": "Zen Compact Transparent Mode",
+  "description": "Make popups UI menu transparent with custom settings.",
+  "homepage": "https://github.com/rasyidrafi/zen-compact-transparent-mode",
+  "image": "https://github.com/rasyidrafi/zen-compact-transparent-mode/blob/main/image.png?raw=true",
+  "style": {
+    "chrome": "https://raw.githubusercontent.com/rasyidrafi/zen-compact-transparent-mode/refs/heads/main/chrome.css"
+  },
+  "readme": "https://raw.githubusercontent.com/rasyidrafi/zen-compact-transparent-mode/refs/heads/main/README.md",
+  "preferences": "https://raw.githubusercontent.com/rasyidrafi/zen-compact-transparent-mode/refs/heads/main/preferences.json",
+  "author": "rasyidrafi",
+  "version": "1.0.0",
+  "tags": ["UI"],
+  "createdAt": "2025-07-29",
+  "updatedAt": "2025-08-03",
+  "fork": ["zen", "firefox"]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "property": "mod.compacttpr.usecompacttransparent",
+    "label": "Enable/Disable Transparent Mode",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "mod.compacttpr.usefromzen",
+    "label": "Use default Zen Browser Color (Will override the custom color below)",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "mod.compacttpr.customcolor",
+    "label": "Custom color for the component (should be on srgb format)",
+    "type": "string",
+    "defaultValue": "rgba(23, 23, 26, 1)"
+  },
+  {
+    "property": "mod.compacttpr.applynoncompact",
+    "label": "Also apply this color on non-compact mode",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "mod.compacttpr.customblur",
+    "label": "Custom blur for the component",
+    "type": "string",
+    "defaultValue": "5px"
+  },
+  {
+    "property": "mod.compacttpr.transparentvalue",
+    "label": "Custom transparent percentage",
+    "type": "string",
+    "defaultValue": "30%"
+  }
+]
