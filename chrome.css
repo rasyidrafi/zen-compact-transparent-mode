@@ -24,8 +24,21 @@
         #zen-appcontent-navbar-container {
         background: color-mix(
           in srgb,
-          var(--zen-dialog-background),
-          transparent var(--mod-compacttpr-transparentvalue, 30%)
+          var(--mod-compacttpr-customcolor-final),
+          transparent var(--mod-compacttpr-transparentvalue, 15%)
+        ) !important;
+        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+      }
+    }
+  }
+
+  :root[zen-compact-mode="true"]:not([customizing]) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
+      #titlebar {
+        background: color-mix(
+          in srgb,
+          var(--mod-compacttpr-customcolor-final),
+          transparent var(--mod-compacttpr-transparentvalue, 15%)
         ) !important;
         backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
       }
@@ -35,13 +48,22 @@
   @media (-moz-bool-pref: "mod.compacttpr.applynoncompact") {
     :root[zen-compact-mode="false"]:not([customizing]) {
       #zen-appcontent-navbar-wrapper #zen-appcontent-navbar-container {
-        background: color-mix(
-          in srgb,
-          var(--zen-dialog-background),
-          transparent var(--mod-compacttpr-transparentvalue, 30%)
-        ) !important;
-        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+        background: var(--mod-compacttpr-customcolor-final) !important;
       }
     }
+
+    :root[zen-compact-mode="false"]:not([customizing]) {
+      #titlebar {
+        background: var(--mod-compacttpr-customcolor-final) !important;
+      }
+    }
+  }
+
+  #titlebar {
+    border-radius: var(--zen-border-radius) !important;
+  }
+
+  #titlebar::before {
+    display: none !important;
   }
 }

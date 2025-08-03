@@ -50,7 +50,7 @@ This theme includes several customization options that can be configured through
 ### Transparency Settings
 
 - **Enable/Disable Transparent Mode**: Toggle the transparent mode on or off
-- **Custom transparent percentage**: Control the transparency level (default: `30%`)
+- **Custom transparent percentage**: Control the transparency level (default: `15%`)
 - **Custom blur for the component**: Adjust blur intensity for transparent elements (default: `5px`)
 
 ### Color Customization
@@ -105,4 +105,4 @@ Created by [rasyidrafi](https://github.com/rasyidrafi)
 
 ---
 
-*Version 1.0.0 - Last updated: August 3, 2025*
+*Version 1.0.2 - Last updated: August 3, 2025*
