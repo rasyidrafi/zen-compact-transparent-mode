@@ -101,4 +101,4 @@ Created by [rasyidrafi](https://github.com/rasyidrafi)
 
 ---
 
-*Version 1.0.4 - Last updated: August 4, 2025*
+*Version 1.0.5 - Last updated: August 4, 2025*

@@ -45,7 +45,7 @@
     }
   }
 
-  :root:not([zen-compact-mode="true"]) #titlebar {
+  :root([zen-compact-mode="false"]) #titlebar {
     box-shadow: var(--zen-big-shadow) !important;
   }
 
