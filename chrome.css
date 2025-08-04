@@ -28,6 +28,8 @@
           transparent var(--mod-compacttpr-transparentvalue, 15%)
         ) !important;
         backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+        box-shadow: var(--zen-big-shadow) !important;
+        border-radius: var(--zen-border-radius) !important;
       }
     }
   }
@@ -41,13 +43,10 @@
           transparent var(--mod-compacttpr-transparentvalue, 15%)
         ) !important;
         backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
+        box-shadow: var(--zen-big-shadow) !important;
+        border-radius: var(--zen-border-radius) !important;
       }
     }
-  }
-
-  :root([zen-compact-mode="false"]) #titlebar {
-    box-shadow: var(--zen-big-shadow) !important;
-    border-radius: var(--zen-border-radius) !important;
   }
 
   #titlebar::before {
