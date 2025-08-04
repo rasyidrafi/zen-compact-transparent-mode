@@ -45,8 +45,7 @@
     }
   }
 
-  #titlebar {
-    border-radius: var(--zen-border-radius) !important;
+  :root:not([zen-compact-mode="true"]) #titlebar {
     box-shadow: var(--zen-big-shadow) !important;
   }
 
