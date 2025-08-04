@@ -47,6 +47,7 @@
 
   :root([zen-compact-mode="false"]) #titlebar {
     box-shadow: var(--zen-big-shadow) !important;
+    border-radius: var(--zen-border-radius) !important;
   }
 
   #titlebar::before {
