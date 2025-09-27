@@ -51,4 +51,8 @@
   #titlebar::before {
     display: none !important;
   }
+
+  #titlebar #zen-toolbar-background {
+    display: none !important;
+  }
 }
