@@ -52,7 +52,7 @@
     display: none !important;
   }
 
-  #titlebar #zen-toolbar-background {
-    display: none !important;
+  .zen-browser-generic-background.zen-toolbar-background {
+    display: none;
   }
 }
