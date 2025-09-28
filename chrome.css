@@ -53,6 +53,6 @@
   }
 
   .zen-browser-generic-background.zen-toolbar-background {
-    display: none;
+    display: none !important;
   }
 }
