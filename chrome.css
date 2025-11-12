@@ -54,24 +54,22 @@
             }
 
             @media not (-moz-bool-pref: "mod.compacttpr.leftsidebaronlycollapsed") {
-              :root[zen-sidebar-expanded="true"] & {
-                :root[zen-single-toolbar="true"] & {
-                  top: 50% !important;
-                  height: calc(
-                    var(--mod-compacttpr-customheight-final) -
-                      var(--zen-compact-float)
-                  ) !important;
-                  transform: translateY(-50%) !important;
-                }
+              :root[zen-single-toolbar="true"] & {
+                top: 50% !important;
+                height: calc(
+                  var(--mod-compacttpr-customheight-final) -
+                    var(--zen-compact-float)
+                ) !important;
+                transform: translateY(-50%) !important;
+              }
 
-                :root:not([zen-single-toolbar="true"]) & {
-                  top: 50% !important;
-                  transform: translateY(-50%) !important;
-                  height: calc(
-                    var(--mod-compacttpr-customheight-final) -
-                      var(--zen-compact-top-toolbar-hidden-fix, 0px)
-                  ) !important;
-                }
+              :root:not([zen-single-toolbar="true"]) & {
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                height: calc(
+                  var(--mod-compacttpr-customheight-final) -
+                    var(--zen-compact-top-toolbar-hidden-fix, 0px)
+                ) !important;
               }
             }
 
