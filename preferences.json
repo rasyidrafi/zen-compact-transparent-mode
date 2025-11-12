@@ -28,5 +28,17 @@
     "label": "Custom transparent percentage",
     "type": "string",
     "defaultValue": "15%"
+  },
+  {
+    "property": "mod.compacttpr.leftsidebarheight",
+    "label": "Custom left sidebar height percentage (default zen is 100%)",
+    "type": "string",
+    "defaultValue": "80%"
+  },
+  {
+    "property": "mod.compacttpr.leftsidebaronlycollapsed",
+    "label": "Implement custom height only on collapsed sidebar (recommended)",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]

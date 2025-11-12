@@ -1,4 +1,11 @@
 @media (-moz-bool-pref: "mod.compacttpr.usecompacttransparent") {
+  :root {
+    --mod-compacttpr-customheight-final: var(
+      --mod-compacttpr-leftsidebarheight,
+      80%
+    ) !important;
+  }
+
   @media (-moz-bool-pref: "mod.compacttpr.usefromzen") {
     :root {
       --mod-compacttpr-customcolor-final: var(
@@ -17,42 +24,69 @@
     }
   }
 
-  :root[zen-compact-mode="true"]:not([customizing]) {
-    @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
-      &:not([zen-single-toolbar="true"])
-        #zen-appcontent-navbar-wrapper
-        #zen-appcontent-navbar-container {
-        background: color-mix(
-          in srgb,
-          var(--mod-compacttpr-customcolor-final),
-          transparent var(--mod-compacttpr-transparentvalue, 15%)
-        ) !important;
-        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
-        box-shadow: var(--zen-big-shadow) !important;
+  :root[zen-compact-mode="true"]:not([customizing]):not(
+      [inDOMFullscreen="true"]
+    ) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") or (-moz-bool-pref: "zen.view.use-single-toolbar") {
+      &:not([zen-compact-animating]) {
+        #navigator-toolbox {
+          &:not([animate="true"]) {
+            @media (-moz-bool-pref: "mod.compacttpr.leftsidebaronlycollapsed") {
+              :root:not([zen-sidebar-expanded="true"]) & {
+                :root[zen-single-toolbar="true"] & {
+                  top: 50% !important;
+                  height: calc(
+                    var(--mod-compacttpr-customheight-final) -
+                      var(--zen-compact-float)
+                  ) !important;
+                  transform: translateY(-50%) !important;
+                }
+
+                :root:not([zen-single-toolbar="true"]) & {
+                  top: 50% !important;
+                  transform: translateY(-50%) !important;
+                  height: calc(
+                    var(--mod-compacttpr-customheight-final) -
+                      var(--zen-compact-top-toolbar-hidden-fix, 0px)
+                  ) !important;
+                }
+              }
+            }
+
+            @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
+              .zen-browser-generic-background.zen-toolbar-background {
+                display: none !important;
+              }
+
+              #titlebar {
+                position: relative !important;
+                box-shadow: var(--zen-big-shadow) !important;
+                border-radius: var(--zen-border-radius) !important;
+                overflow: hidden !important;
+              }
+
+              #titlebar::before {
+                content: "" !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                background: color-mix(
+                  in srgb,
+                  var(--mod-compacttpr-customcolor-final),
+                  transparent var(--mod-compacttpr-transparentvalue, 15%)
+                ) !important;
+                backdrop-filter: blur(
+                  var(--mod-compacttpr-customblur, 5px)
+                ) !important;
+                z-index: -1 !important;
+                pointer-events: none !important;
+              }
+            }
+          }
+        }
       }
     }
-  }
-
-  :root[zen-compact-mode="true"]:not([customizing]) {
-    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
-      #titlebar {
-        background: color-mix(
-          in srgb,
-          var(--mod-compacttpr-customcolor-final),
-          transparent var(--mod-compacttpr-transparentvalue, 15%)
-        ) !important;
-        backdrop-filter: blur(var(--mod-compacttpr-customblur, 5px)) !important;
-        box-shadow: var(--zen-big-shadow) !important;
-        border-radius: var(--zen-border-radius) !important;
-      }
-    }
-  }
-
-  #titlebar::before {
-    display: none !important;
-  }
-
-  .zen-browser-generic-background.zen-toolbar-background {
-    display: none !important;
   }
 }
